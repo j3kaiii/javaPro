@@ -47,6 +47,6 @@ class Box<T> {
     }
 
     public float getWeight() {
-        return weight;
+        return weight; // list.size() * <T>.getWeight - не работает, не известен объект Т
     }
 }
