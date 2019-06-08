@@ -28,6 +28,7 @@ public class FruitBoxes {
         //orangeBox.moveToOtherBox(appleBox1);  -- не работает, разные типы боксов
         System.out.println("Old apple box weight : " + appleBox.getWeight());
         System.out.println("New Apple box weight : " + appleBox1.getWeight());
+        System.out.println(appleBox1.compare(orangeBox));
     }
 }
 
