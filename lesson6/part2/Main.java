@@ -5,15 +5,10 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
-        int[] mass = new int[] {1,2,3,5,6,7,8,9,10,11};
-        int[] newMass = getMass(mass);
-        System.out.println(Arrays.toString(newMass));
 
     }
 
-    public static int[] getMass(int[] oldMass) {
-
-
+    public int[] getMass(int[] oldMass) {
         int size = 0; // размер нового массива
         for (int i = oldMass.length - 1; i >= 0; i--) {
             if (oldMass[i] == 4) break;
@@ -25,6 +20,25 @@ public class Main {
             newMass[i] = oldMass[oldMass.length - size + i];
         }
         return newMass;
+    }
+
+    public boolean checkMass(int[] mass) {
+        boolean one = false;
+        boolean two = false;
+        for (int i : mass) {
+            if (i == 1) {
+                one = true;
+                break;
+            }
+        }
+        for (int i : mass) {
+            if (i == 4) {
+                two = true;
+                break;
+            }
+        }
+        if (one && two) return true;
+        return false;
     }
 
 }
