@@ -106,8 +106,8 @@ public class RefTest {
 //                Method printIsPositiveM = temp.getDeclaredMethod("printIsPositive", int.class);
 //                printIsPositiveM.setAccessible(true);
 //                try {
-//
-//                    if () {
+//                    String test = (String)printIsPositiveM.invoke(1);
+//                    if (test.equalsIgnoreCase("Your number is positive!")) {
 //                        System.out.println("Method " + printIsPositiveM.getName() + " is correct!");
 //                    } else {
 //                        System.out.println("Method " + printIsPositiveM.getName() + " is incorrect!");
@@ -116,9 +116,22 @@ public class RefTest {
 //                    e.printStackTrace();
 //                } catch (InvocationTargetException e) {
 //                    e.printStackTrace();
-//                } catch (IOException e) {
-//                    e.printStackTrace();
 //                }
+
+//                Method printWelocomeM = temp.getDeclaredMethod("printWelocome", String.class);
+////                printWelocomeM.setAccessible(true);
+////                try {
+////                    String test = (String)printWelocomeM.invoke("Bob");
+////                    if (test.equalsIgnoreCase("Привет, Bob!")) {
+////                        System.out.println("Method " + printWelocomeM.getName() + " is correct!");
+////                    } else {
+////                        System.out.println("Method " + printWelocomeM.getName() + " is incorrect!");
+////                    }
+////                } catch (IllegalAccessException e) {
+////                    e.printStackTrace();
+////                } catch (InvocationTargetException e) {
+////                    e.printStackTrace();
+////                }
 
                 Method isLeapYearM = temp.getDeclaredMethod("isLeapYear", int.class);
                 isLeapYearM.setAccessible(true);
